@@ -129,8 +129,7 @@ public class FirstSteps {
                     max = matrix[i][j];
                 }
             }
-        }
-        return max;
+        }return max;
     }
 
     public int diagonalMax(int[][] matrix) {
