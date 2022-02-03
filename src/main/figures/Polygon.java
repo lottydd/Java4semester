@@ -25,19 +25,16 @@ public class Polygon {
     }
 
     public double getPerimeter() {
-        double per = 0;
+        double perimeter = 0;
         for (int i = 1; i < points.length; i++) {
             int dx = points[i].getX() - points[i - 1].getX();
             int dy = points[i].getY() - points[i - 1].getY();
-            per += Math.sqrt(dx * dx + dy * dy);
+            perimeter += Math.sqrt(dx * dx + dy * dy);
         }
-
-        {
             int dx = points[0].getX() - points[points.length - 1].getX();
             int dy = points[0].getY() - points[points.length - 1].getY();
-            per += Math.sqrt(dx * dx + dy * dy);
-        }
-        return per;
+        perimeter += Math.sqrt(dx * dx + dy * dy);
+        return perimeter;
 
     }
 
@@ -47,8 +44,6 @@ public class Polygon {
         for (Point point : points) {
             point.moveRel(dx, dy);
         }
-
-
     }
 
     public void moveTo(Point point) {

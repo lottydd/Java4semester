@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04ca0d52-11e5-4499-b4ca-2e7fa2fffc8e" name="Changes" comment="" />
+    <list default="true" id="04ca0d52-11e5-4499-b4ca-2e7fa2fffc8e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/figures/exception/FiguresErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/figures/exception/FiguresException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/figures/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/figures/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/figures/CircleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/figures/CircleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/figures/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/figures/Ellipse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/figures/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/figures/Line.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/figures/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/figures/Polygon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestCircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestEllipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestEllipse.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,9 +22,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="216155synsxUUcZqjPNRwju7FK1" />
   <component name="ProjectView">
@@ -81,9 +97,13 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/net/thumbtack/school/figures/v1" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Task03" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="main.figures.exception" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Git\Task02\src\net\thumbtack\school\figures\v1" />
       <recent name="D:\Git\Task02\src\figures\v1" />
@@ -93,16 +113,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.TestPolygon">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="Task01" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestCircle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Task01" />
       <extension name="coverage">
@@ -129,6 +139,22 @@
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.TestEllipse" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestEllipse.testIsPointInsideEllipse1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Task01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.TestEllipse" />
+      <option name="METHOD_NAME" value="testIsPointInsideEllipse1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,9 +192,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestPolygon" />
-        <item itemvalue="JUnit.TestLine" />
+        <item itemvalue="JUnit.TestEllipse.testIsPointInsideEllipse1" />
         <item itemvalue="JUnit.TestEllipse" />
         <item itemvalue="JUnit.TestCircle" />
+        <item itemvalue="JUnit.TestLine" />
       </list>
     </recent_temporary>
   </component>
@@ -183,14 +210,20 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/TestEllipse.java</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/TestLine.java</url>
           <line>8</line>

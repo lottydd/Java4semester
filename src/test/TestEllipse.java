@@ -2,6 +2,7 @@ package test;
 
 import main.figures.Ellipse;
 import main.figures.Point;
+import main.figures.exception.FiguresException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -110,7 +111,7 @@ public class TestEllipse {
     }
 
     @Test
-    public void testResizeEllipse() {
+    public void testResizeEllipse() throws FiguresException {
         Ellipse ellipse = new Ellipse(10, 20, 10, 20);
         ellipse.resize(5);
         assertAll(

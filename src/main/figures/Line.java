@@ -5,31 +5,28 @@ import java.util.Objects;
 public class Line {
     private Point startPoint;
     private Point endPoint;
-    private int x, y;
+    private int x;
+    private int y;
 
     public Line(Point startPoint, Point endPoint) {
         this.startPoint = new Point(startPoint.getX(), startPoint.getY());
         this.endPoint = new Point(endPoint.getX(), endPoint.getY());
     }
 
-
     public Line(int xLeft, int yTop, int xRight, int yBottom) {
         this.startPoint = new Point(xLeft, yTop);
         this.endPoint = new Point(xRight, yBottom);
     }
-
 
     public Line(Point endPoint) {
         this.startPoint = new Point(0, 0);
         this.endPoint = new Point(endPoint.getX(), endPoint.getY());
     }
 
-
     public Line(int x, int y) {
         this.startPoint = new Point(0, 0);
         this.endPoint = new Point(x, y);
     }
-
 
     public Line() {
         this.startPoint = new Point(0, 0);
@@ -57,19 +54,16 @@ public class Line {
     }
 
     public void moveTo(int x, int y) {
-        int dx=endPoint.getX()-startPoint.getX();
-        int dy=endPoint.getY()-startPoint.getY();
-
+        int dx = endPoint.getX() - startPoint.getX();
+        int dy = endPoint.getY() - startPoint.getY();
         startPoint.moveTo(x, y);
         endPoint.moveTo(x, y);
         endPoint.moveRel(dx,dy);
         //   moveTo(new Point(x,y)); - лучше использовать что есть чем создать новое
     }
 
-
     public void moveTo(Point point) {
         moveTo(point.getX(), point.getY());
-
     }
 
     public void moveRel(int dx, int dy) {

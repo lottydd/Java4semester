@@ -3,6 +3,7 @@ package test;
 import main.figures.Circle;
 import main.figures.CircleFactory;
 import main.figures.Point;
+import main.figures.exception.FiguresException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -76,7 +77,7 @@ public class TestCircle {
     }
 
     @Test
-    public void testResizeCircle() {
+    public void testResizeCircle() throws FiguresException {
         Circle circle = new Circle(10, 20, 10);
         circle.resize(5);
         assertAll(

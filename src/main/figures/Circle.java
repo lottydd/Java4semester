@@ -1,5 +1,8 @@
 package main.figures;
 
+import main.figures.exception.FiguresErrorCode;
+import main.figures.exception.FiguresException;
+
 import java.util.Objects;
 
 public class Circle {
@@ -16,46 +19,33 @@ public class Circle {
         this.center = new Point(xCenter, yCenter);
     }
 
-
     public Circle(int radius) {
         setRadius(radius);
         this.center = new Point(0, 0);
-
     }
-
 
     public Circle() {
         setRadius(1);
         this.center = new Point(0, 0);
     }
 
-
     public Point getCenter() {
         return center;
     }
-
 
     public int getRadius() {
         return radius;
     }
 
-
     public void setCenter(Point center) {
         this.center = new Point(center.getX(),center.getY());
     }
-
 
     public void setRadius(int radius) {
         this.radius = radius;
     }
 
-
-    public void moveRel(int dx, int dy) {
-
-        center.moveRel(dx, dy);
-
-    }
-
+    public void moveRel(int dx, int dy) {center.moveRel(dx, dy);}
 
     public void moveTo(int x, int y) {
         center.moveTo(x, y);
@@ -65,26 +55,19 @@ public class Circle {
         moveTo(point.getX(), point.getY());
     }
 
-
-    public void resize(int ratio) {
+    public void resize(int ratio) throws FiguresException {
+        if (ratio< 0 ){throw new FiguresException(FiguresErrorCode.CIRCLE_WRONG_RATIO);}
         setRadius(radius * ratio);
     }
 
+    public double getArea() {return Math.PI * Math.pow(radius, 2);}
 
-    public double getArea() {
-        return Math.PI * Math.pow(radius, 2);
-    }
-
-
-    public double getPerimeter() {
-        return Math.PI * radius * 2;
-    }
-
+    public double getPerimeter() {return Math.PI * radius * 2;}
 
     public boolean isInside(int x, int y) {
         int dx = x - center.getX();
         int dy = y - center.getY();
-        return dx * dx + dy * dy <= radius * radius;
+        return Math.pow(dx, 2) + Math.pow(dy, 2) <= Math.pow(radius, 2);
     }
 
     public boolean isInside(Point point) {
