@@ -27,23 +27,20 @@ public class NumberOperations {
     public static Double calculateDensity(double weight, double volume,
                                           double min, double max) {
         double result = weight / volume;
-        if (min < result && result < max) {
+        if (min <= result && result <= max) {
             return result;
         }
         return null;
     }
 
     public static Integer find(BigInteger[] array, BigInteger value) {
-
         Integer result = null;
-
         for (int i = 0; i < array.length; i++) {
             if (array[i].equals(value)) {
                 return i;
             }
         }
-        return result;
-    }
+        return result;}
 
     public static BigDecimal calculateDensity
             (BigDecimal weight, BigDecimal volume,

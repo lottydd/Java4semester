@@ -12,7 +12,6 @@ public class StringOperations {
     }
 
     public static String getFirstAndLastLetterString(String string) {
-
         return string.charAt(0) + string.substring(string.length() - 1);
     }
 
@@ -77,14 +76,14 @@ public class StringOperations {
 
     public static String reverse(String string) {
 
-        return new StringBuffer(string).reverse().toString();
+        return new StringBuilder(string).reverse().toString();
     }
 
     public static boolean isPalindrome(String string) {
 
-        int halfLenght = string.length() / 2;
+        int halfLength = string.length() / 2;
 
-        for (int i = 0; i < halfLenght; i++) {
+        for (int i = 0; i < halfLength; i++) {
 
             if (string.charAt(i) != string.charAt(string.length() - i - 1)) {
                 return false;
@@ -107,34 +106,27 @@ public class StringOperations {
             }
         }
         return result;
-
     }
 
     public static boolean hasSameSubstring(String string1, String string2,
-                                           int index, int length) {
+                                           int index, int length) throws StringException {
         if (string1.length() - index < length || string2.length() - index < length) {
-            return false;
+            throw new StringException(StringErrorCode.STRING_WRONG_LENGTH );
         }
-
         return string1.substring(index, index + length).equals(string2.substring(index, index + length));
     }
 
     public static boolean isEqualAfterReplaceCharacters(String string1, char replaceInStr1, char replaceByInStr1,
                                                         String string2, char replaceInStr2, char replaceByInStr2) {
-
-
         return string1.replace(replaceInStr1, replaceByInStr1)
                 .equals(string2.replace(replaceInStr2, replaceByInStr2));
-
     }
-
 
     public static boolean isEqualAfterReplaceStrings(String string1, String replaceInStr1, String replaceByInStr1,
                                                      String string2, String replaceInStr2, String replaceByInStr2) {
         return string1.replace(replaceInStr1, replaceByInStr1)
                 .equals(string2.replace(replaceInStr2, replaceByInStr2));
     }
-
 
     public static boolean isPalindromeAfterRemovingSpacesIgnoreCase(String string) {
         return isPalindromeIgnoreCase(string.replace(" ", ""));
@@ -145,19 +137,15 @@ public class StringOperations {
     }
 
     public static String makeCsvStringFromInts(int[] array) {
-
         return makeCsvStringBuilderFromInts(array).toString();
     }
 
     public static String makeCsvStringFromDoubles(double[] array) {
-
         return makeCsvStringBuilderFromDoubles(array).toString();
     }
 
     public static StringBuilder makeCsvStringBuilderFromInts(int[] array) {
-
         StringBuilder sb = new StringBuilder();
-
         if (array == null || array.length == 0) {
             return sb;
         }
@@ -165,8 +153,7 @@ public class StringOperations {
             sb.append(value);
             sb.append(',');
         }
-
-        sb.deleteCharAt(sb.length() - 1); //!!
+        sb.deleteCharAt(sb.length() - 1);
         return sb;
     }
 
@@ -175,17 +162,14 @@ public class StringOperations {
         if (array == null || array.length == 0) {
             return sb;
         }
-
         for (double value : array) {
             sb.append(String.format("%.2f,", value));
-
         }
         sb.deleteCharAt(sb.length() - 1);
         return sb;
     }
 
     public static StringBuilder removeCharacters(String string, int[] positions) {
-
         StringBuilder sb = new StringBuilder(string);
         for (int i = positions.length - 1; i >= 0; i--) {
             sb.delete(positions[i], positions[i] + 1);
@@ -195,15 +179,12 @@ public class StringOperations {
 
     public static StringBuilder insertCharacters(String string, int[]
             positions, char[] characters) {
-
         StringBuilder sb = new StringBuilder(string);
-
         for (int i = positions.length - 1; i >= 0; i--) {
             sb.insert(positions[i], characters[i]);
         }
         return sb;
     }
-
 }
 
 
